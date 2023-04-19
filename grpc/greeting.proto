@@ -1,0 +1,17 @@
+syntax = "proto3";
+option go_package = "injulkarnilesh.github.com/go/grpc/greet";
+
+service GreetMe {
+    rpc Hello(HelloRequest) returns (HelloResponse) {}
+    rpc Namaste(HelloRequest) returns (HelloResponse) {}
+}
+
+message HelloRequest {
+    string firstName = 1;
+    string lastName = 2;
+    int32 age = 3;
+}
+
+message HelloResponse {
+    string message = 1;
+}
